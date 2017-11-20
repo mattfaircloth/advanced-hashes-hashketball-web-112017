@@ -126,64 +126,64 @@ game_hash = {
 }
 end
 
-# def num_points_scored(player)
-#  game_hash.each do |location, team_data|
-#    team_data.each do |attribute, data|
-#      if attribute == :players
-#        data.each do |name, stat|
-#          if name == player
-#            stat.each do |characteristic, stat_item|
-#              if characteristic == :points
-#                return stat_item
-#              end
-#            end
-#          end
-#        end
-#      end
-#     end
-#   end
-# end
-#
-# def shoe_size(player)
-#  game_hash.each do |location, team_data|
-#    team_data.each do |attribute, data|
-#      if attribute == :players
-#        data.each do |name, stat|
-#          if name == player
-#            stat.each do |characteristic, stat_item|
-#              if characteristic == :shoe
-#                return stat_item
-#              end
-#            end
-#          end
-#        end
-#      end
-#     end
-#   end
-# end
-#
-# def team_colors(team)
-#   game_hash.each do |location, team_data|
-#     team_data.each do |stat, data|
-#       #puts data
-#     if data.to_s == team
-#       jersey_colors = team_data[:colors]
-#       return jersey_colors
-#       end
-#     end
-#   end
-# end
-#
-#
-# def team_names
-#   team_array = []
-#   game_hash.each do |location, team_data|
-#     team_data.each do |stat, data|
-#     end
-#     team_array << team_data[:team_name]
-#   end
-#   return team_array
-# end
+def num_points_scored(player)
+ game_hash.each do |location, team_data|
+   team_data.each do |attribute, data|
+     if attribute == :players
+       data.each do |name, stat|
+         if name == player
+           stat.each do |characteristic, stat_item|
+             if characteristic == :points
+               return stat_item
+             end
+           end
+         end
+       end
+     end
+    end
+  end
+end
+
+def shoe_size(player)
+ game_hash.each do |location, team_data|
+   team_data.each do |attribute, data|
+     if attribute == :players
+       data.each do |name, stat|
+         if name == player
+           stat.each do |characteristic, stat_item|
+             if characteristic == :shoe
+               return stat_item
+             end
+           end
+         end
+       end
+     end
+    end
+  end
+end
+
+def team_colors(team)
+  game_hash.each do |location, team_data|
+    team_data.each do |stat, data|
+      #puts data
+    if data.to_s == team
+      jersey_colors = team_data[:colors]
+      return jersey_colors
+      end
+    end
+  end
+end
+
+
+def team_names
+  team_array = []
+  game_hash.each do |location, team_data|
+    #team_data.each do |stat, data|
+    
+    team_array << team_data[:team_name]
+  end
+  return team_array
+end
 #
 # def player_numbers(team)
 #   final = []
